@@ -1,12 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Nunito&family=Oxygen+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Oxygen+Mono&display=swap");
+
+:root {
+    --main-color: rgb(95, 191, 250);
+    --title-color: #CC4334;
+    --title-font: Poppins, sans-serif;
+    --content-font: Poppins, sans-serif;
+    --code-font: "Oxygen Mono", monospace;
+}
 
 h1,
 h2,
 h3 {
-    font-family: Bitter, serif;
-    color: #555555;
+    font-family: var(--title-font);
+    font-weight: 900;
+    color: var(--title-color);
     text-shadow: 1px 1px 2px #333333;
-    font-weight: normal;
 }
 
 h5 {
@@ -19,22 +27,22 @@ hr {
 
 .remark-slide-content {
     background-color: white;
-    font-family: Nunito, sans-serif;
+    font-family: var(--content-font);
     font-size: 32px;
     color: #333333;
-    border-left: 1em solid #ed4337;
+    border-left: 1em solid var(--main-color);
     padding: 1em 3em;
 }
 
 .remark-code,
 .remark-inline-code,
 .code {
-    font-family: "Oxygen Mono", monospace;
+    font-family: var(--code-font);
     font-size: 22px;
 }
 
 .remark-slide-number {
-    font-family: "Oxygen Mono", serif;
+    font-family: var(--code-font);
     font-size: 20px;
     top: 12px;
 }
@@ -74,7 +82,7 @@ hr {
 }
 
 .box {
-    font-family: "Oxygen Mono", monospace;
+    font-family: var(--code-font);
     margin: 0.5em 0;
     padding: 0.5em;
     padding-left: 1em;
@@ -147,7 +155,7 @@ hr {
 }
 
 .theme{
-    color: #ed4337;
+    color: var(--main-color);
 }
 
 .red {
