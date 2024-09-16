@@ -1,208 +1,208 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Oxygen+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen+Mono&display=swap");
 
 :root {
-    --main-color: rgb(95, 191, 250);
-    --title-color: #CC4334;
-    --title-font: Poppins, sans-serif;
-    --content-font: Poppins, sans-serif;
-    --code-font: "Oxygen Mono", monospace;
+  --main-color: rgb(95, 191, 250);
+  --title-color: #cc4334;
+  --title-font: Poppins, sans-serif;
+  --content-font: Poppins, sans-serif;
+  --code-font: "Oxygen Mono", monospace;
 }
 
 h1,
 h2,
 h3 {
-    font-family: var(--title-font);
-    font-weight: 900;
-    color: var(--title-color);
-    text-shadow: 1px 1px 2px #333333;
+  font-family: var(--title-font);
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 1px 1px 2px #333333;
 }
 
 h5 {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 hr {
-    border: 1px solid #555;
+  border: 1px solid #555;
 }
 
 .remark-slide-content {
-    background-color: white;
-    font-family: var(--content-font);
-    font-size: 32px;
-    color: #333333;
-    border-left: 1em solid var(--main-color);
-    padding: 1em 3em;
+  background-color: white;
+  font-family: var(--content-font);
+  font-size: 32px;
+  color: #333333;
+  border-left: 1em solid var(--main-color);
+  padding: 1em 2em;
 }
 
 .remark-code,
 .remark-inline-code,
 .code {
-    font-family: var(--code-font);
-    font-size: 22px;
+  font-family: var(--code-font);
+  font-size: 24px;
 }
 
 .remark-slide-number {
-    font-family: var(--code-font);
-    font-size: 20px;
-    top: 12px;
+  font-family: var(--code-font);
+  font-size: 20px;
+  top: 12px;
 }
 
 .left-column {
-    width: 49%;
-    float: left;
+  width: 49%;
+  float: left;
 }
 .right-column {
-    width: 49%;
-    float: right;
+  width: 49%;
+  float: right;
 }
 
 .left-column-33 {
-    width: 33%;
-    float: left;
+  width: 33%;
+  float: left;
 }
 .right-column-66 {
-    width: 66%;
-    float: right;
+  width: 66%;
+  float: right;
 }
 
 .left-column-66 {
-    width: 66%;
-    float: left;
+  width: 66%;
+  float: left;
 }
 .right-column-33 {
-    width: 33%;
-    float: right;
+  width: 33%;
+  float: right;
 }
 
 .right-column ~ p {
-    clear: both;
+  clear: both;
 }
 .right-column ~ ul {
-    clear: both;
+  clear: both;
 }
 
 .box {
-    font-family: var(--code-font);
-    margin: 0.5em 0;
-    padding: 0.5em;
-    padding-left: 1em;
-    display: block;
-    background: rgba(100, 100, 100, 0.1);
-    border-left: 2em solid transparent;
-    clear: both;
+  font-family: var(--code-font);
+  margin: 0.5em 0;
+  padding: 0.5em;
+  padding-left: 1em;
+  display: block;
+  background: rgba(100, 100, 100, 0.1);
+  border-left: 2em solid transparent;
+  clear: both;
 }
 
 .nice {
-    border-left-color: green;
+  border-left-color: green;
 }
 
 .look {
-    border-left-color: orange;
+  border-left-color: orange;
 }
 
 .what {
-    border-left-color: darkred;
+  border-left-color: darkred;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .top {
-    margin-left: -3em;
-    margin-top: -1em;
+  margin-left: -3em;
+  margin-top: -1em;
 }
 
 .bottom {
-    position: fixed;
-    max-width: 70%;
-    bottom: 1em;
+  position: fixed;
+  max-width: 70%;
+  bottom: 1em;
 }
 
 .ref {
-    font-size: 0.7em;
-    color: crimson;
-    vertical-align: super;
+  font-size: 0.7em;
+  color: crimson;
+  vertical-align: super;
 }
 
 .footnote {
-    font-size: 0.6em !important;
-    display: block;
+  font-size: 0.6em !important;
+  display: block;
 }
 
 .ref:before {
-    content: "[";
+  content: "[";
 }
 
 .ref:after {
-    content: "]";
+  content: "]";
 }
 
 .big {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .large {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .huge {
-    font-size: 4em;
+  font-size: 4em;
 }
 
 .small {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
-.theme{
-    color: var(--main-color);
+.theme {
+  color: var(--main-color);
 }
 
 .red {
-    color: crimson;
+  color: crimson;
 }
 
 .green {
-    color: darkgreen;
+  color: darkgreen;
 }
 
 .blue {
-    color: steelblue;
+  color: steelblue;
 }
 
 .yellow {
-    color: darkgoldenrod;
+  color: darkgoldenrod;
 }
 
 .emph {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .strike {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .todo {
-    display: block;
-    background: pink;
-    color: darkred;
-    padding: 0.2em 1em;
+  display: block;
+  background: pink;
+  color: darkred;
+  padding: 0.2em 1em;
 }
 
 .todo:before {
-    content: "TODO: ";
-    font-weight: bold;
+  content: "TODO: ";
+  font-weight: bold;
 }
 
 table th,
 table td {
-    padding: 0em 0.5em;
+  padding: 0em 0.5em;
 }
 
 .wide table td {
-    padding: 0.5em;
+  padding: 0.5em;
 }
