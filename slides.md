@@ -11,13 +11,14 @@ class: middle center
 #### Lorenzo Peña
 
 - 15 years of Python + Django
-- Backend Engineer at Alasco
+- From Holguín to Munich
+- Django developer at Alasco
 
 ![Alasco QR Code](images/qr-alasco.png)
 
 ]
 
-.right-column-33[![Myself](images/lorinkoz.jpg)]
+.right-column-33[![Myself](images/lorinkoz.png)]
 
 ---
 
@@ -69,10 +70,6 @@ When you change a URI on your server, you can never completely tell who will hav
 --
 
 4. Retire .red[old] URLs (eventually) 🤔
-
---
-
-.right-column[![Converging railroad tracks](images/tracks.jpeg)]
 
 ---
 
@@ -269,6 +266,26 @@ def we_want_to_handle(request):
 
 ---
 
+## Interlude: redirect codes!
+
+--
+
+> > .code.green.big[302_FOUND]
+
+> > .code.green.big[301_MOVED_PERMANENTLY]
+
+--
+
+> > .code.green.big[307_TEMPORARY_REDIRECT]
+
+> > .code.green.big[308_PERMANENT_REDIRECT]
+
+--
+
+> > .code.green.big[309_REPLACE_USER_BOOKMARKS]
+
+---
+
 ## Is old URL?
 
 --
@@ -304,12 +321,6 @@ def find_new_url(request):
 --
 
 .box[🤔 What about query parameters?]
-
----
-
-class: middle
-
-.left-column-66[![Multiple railroad tracks](images/tracks2.gif)]
 
 ---
 

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen+Mono&display=swap");
 
 :root {
-  --main-color: rgb(95, 191, 250);
-  --title-color: #cc4334;
+  --main-color: #5fbffa;
+  --title-color: #db433b;
   --title-font: Poppins, sans-serif;
   --content-font: Poppins, sans-serif;
   --code-font: "Oxygen Mono", monospace;
@@ -14,7 +14,8 @@ h3 {
   font-family: var(--title-font);
   font-weight: 700;
   color: var(--title-color);
-  text-shadow: 1px 1px 2px #333333;
+  text-shadow: 1px 1px 2px #7d241f;
+  margin-top: 0.5em;
 }
 
 h5 {
@@ -29,7 +30,7 @@ hr {
   background-color: white;
   font-family: var(--content-font);
   font-size: 32px;
-  color: #333333;
+  color: #333;
   border-left: 1em solid var(--main-color);
   padding: 1em 2em;
 }
@@ -43,7 +44,7 @@ hr {
 
 .remark-slide-number {
   font-family: var(--code-font);
-  font-size: 20px;
+  font-size: 16px;
   top: 12px;
 }
 
@@ -88,20 +89,20 @@ hr {
   padding-left: 1em;
   display: block;
   background: rgba(100, 100, 100, 0.1);
-  border-left: 2em solid transparent;
+  border-left: 1em solid transparent;
   clear: both;
 }
 
 .nice {
-  border-left-color: green;
+  border-left-color: #64a03d;
 }
 
 .look {
-  border-left-color: orange;
+  border-left-color: #f39745;
 }
 
 .what {
-  border-left-color: darkred;
+  border-left-color: #db433b;
 }
 
 .clear {
@@ -121,7 +122,7 @@ hr {
 
 .ref {
   font-size: 0.7em;
-  color: crimson;
+  color: #db433b;
   vertical-align: super;
 }
 
@@ -159,19 +160,19 @@ hr {
 }
 
 .red {
-  color: crimson;
+  color: #db433b;
 }
 
 .green {
-  color: darkgreen;
+  color: #64a03d;
 }
 
 .blue {
-  color: steelblue;
+  color: #3d9cfb;
 }
 
 .yellow {
-  color: darkgoldenrod;
+  color: #e7bb43;
 }
 
 .emph {
@@ -183,18 +184,6 @@ hr {
 }
 
 .bold {
-  font-weight: bold;
-}
-
-.todo {
-  display: block;
-  background: pink;
-  color: darkred;
-  padding: 0.2em 1em;
-}
-
-.todo:before {
-  content: "TODO: ";
   font-weight: bold;
 }
 
