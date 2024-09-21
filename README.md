@@ -1,3 +1,3 @@
-# talk-djangoconus24-lightning
+# talk-djangoconus24-redirect
 
-Lightning talks for DjangoCon US 2024
+Talk description: https://pretalx.com/djangocon-us-2024/talk/review/A3AQTCF8DWVHUVX8VCVXAM7GRRWSWUW8
