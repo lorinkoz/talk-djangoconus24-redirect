@@ -49,45 +49,75 @@ class: middle center
 
 class: middle center
 
-TODO - Sketch of a browser with a dividing line between the URL bar and the content
-
----
-
-class: middle center
-
 ![X poll regarding who's in charge of URLs](images/x-poll-2.png)
 
 ---
 
 class: middle center
 
+![Empty browser](images/browser.png)
+
+---
+
+layout: true
+class: middle center
+
+![Cool URIs don't change QR Code](images/qr-uris.png)
+
+{{ content }}
+
+.small.blue[Tim Berners-Lee &mdash; Cool URIs don't change, 1998]
+
+---
+
+It is the the duty of a **Webmaster** to allocate URIs which you will be able to stand by in 2 years, in 20 years, in 200 years. This needs thought, and organization, and commitment.
+<br/>
+<br/>
+
+---
+
 When you change a URI on your server, you can never completely tell who will have links to the old URI [...] They might have bookmarked your page. They might have scrawled the URI in the margin of a letter to a friend.
 
-.blue[Tim Berners-Lee &mdash; Cool URIs don't change, 1998].ref[1]
+---
 
-.bottom[.left[
-.footnote[.ref[1] https://www.w3.org/Provider/Style/URI.html.en]
-]]
+layout: false
+
+## The problem
+
+--
+
+.center.left-column[
+
+![Meme of person staring at screen](images/staring.png)
+
+Naming things is hard<br/>
+(let alone URLs)
+
+]
+
+--
+
+.center.right-column[
+
+![Illustration of tree branches](images/branches.png)
+
+Named things evolve in time<br/>
+(and so should URLs)
+
+]
+
+---
+
+class: middle center
+
+# Design as best as you can
+
+### Break as less as you can
 
 ???
 
 Reality: We should avoid not-rightful 404s
 Joke: Let's return 400 instead and make everyone crazy
-
----
-
-## The problem
-
-1. Naming things is hard, let alone URL'ing things.
-2. Products evolve and with it the names of things.
-3. There must be a middle ground.
-
----
-
-## The attitude
-
-- Design as best as we can
-- Break as less as we can
 
 ---
 
