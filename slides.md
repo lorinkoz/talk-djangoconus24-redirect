@@ -35,9 +35,27 @@ class: middle center
 
 ---
 
-## The problem
+class: middle center
 
-.left-column-33[![Post with directions](images/directions.jpeg)]
+![X poll regarding how the URLs look](images/x-poll-1.png)
+
+---
+
+class: middle center
+
+## Whose responsibility is this?
+
+---
+
+class: middle center
+
+TODO - Sketch of a browser with a dividing line between the URL bar and the content
+
+---
+
+class: middle center
+
+![X poll regarding who's in charge of URLs](images/x-poll-2.png)
 
 ---
 
@@ -50,6 +68,56 @@ When you change a URI on your server, you can never completely tell who will hav
 .bottom[.left[
 .footnote[.ref[1] https://www.w3.org/Provider/Style/URI.html.en]
 ]]
+
+???
+
+Reality: We should avoid not-rightful 404s
+Joke: Let's return 400 instead and make everyone crazy
+
+---
+
+## The problem
+
+1. Naming things is hard, let alone URL'ing things.
+2. Products evolve and with it the names of things.
+3. There must be a middle ground.
+
+---
+
+## The attitude
+
+- Design as best as we can
+- Break as less as we can
+
+---
+
+## Redirects
+
+---
+
+## Redirect codes!
+
+--
+
+> > .code.green.big[302_FOUND]
+
+> > .code.green.big[301_MOVED_PERMANENTLY]
+
+--
+
+> > .code.green.big[307_TEMPORARY_REDIRECT]
+
+> > .code.green.big[308_PERMANENT_REDIRECT]
+
+--
+
+> > .code.green.big[309_REPLACE_USER_BOOKMARKS]
+
+---
+
+## My story
+
+.left-column-33[![Post with directions](images/directions.jpeg)]
 
 ---
 
@@ -70,6 +138,12 @@ When you change a URI on your server, you can never completely tell who will hav
 --
 
 4. Retire .red[old] URLs (eventually) 🤔
+
+---
+
+class: middle center
+
+# The art of not redirecting
 
 ---
 
@@ -154,6 +228,16 @@ If it's well designed, it will be beautiful
 .box.nice[/this-one/as-well]
 .box.nice[/style/isReallyNotThatImportant.html]
 .box.nice[\#/or-is-it?]
+
+---
+
+class: middle center
+
+# The art of redirecting
+
+---
+
+## Django's provided redirects
 
 ---
 
@@ -263,26 +347,6 @@ def should_go_to_new(request):
 def we_want_to_handle(request):
     return response.status_code not in [301, 302]
 ```
-
----
-
-## Interlude: redirect codes!
-
---
-
-> > .code.green.big[302_FOUND]
-
-> > .code.green.big[301_MOVED_PERMANENTLY]
-
---
-
-> > .code.green.big[307_TEMPORARY_REDIRECT]
-
-> > .code.green.big[308_PERMANENT_REDIRECT]
-
---
-
-> > .code.green.big[309_REPLACE_USER_BOOKMARKS]
 
 ---
 
