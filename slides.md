@@ -321,7 +321,7 @@ What is beautiful?
 
 ---
 
-Thought, and organization and commitment will make them .bold[beautiful].
+Thought, organization and commitment will make them .bold[beautiful].
 
 ---
 
@@ -349,6 +349,7 @@ class: middle center
 
 ---
 
+name: geek
 class: middle center
 
 .large[.huge[🤓]]
@@ -743,33 +744,45 @@ def find_new_url(request):
 ---
 
 layout: false
+class: middle
+
+.center.left-column[
+
+![Meme of person staring at screen](images/staring.png)
+
+]
+
+.center.right-column[
+
+![Illustration of tree branches](images/branches.png)
+
+]
 
 ---
 
-## Vanilla path
+## Path
 
 ```python
 path(
     "users/<int:pk>/",
-    UserDetailUpdateView.as_view(),
-    name="user_detail_update",
+    UserDetailView.as_view(),
+    name="user_detail",
 )
 ```
 
 ---
 
-## Cranberry path
+## Path with old
 
 ```python
 path_with_old(
     "users/<int:pk>/",
-    UserDetailUpdateView.as_view(),
-    name="user_detail_update",
+    UserDetailView.as_view(),
+    name="user_detail",
     old=[
-        "users/<int:pk>/invite/",
-        "users/<int:pk>/toggle/",
-        "users/<int:pk>/revoke/",
-        "users/<int:pk>/delete/",
+        "users/<int:pk>/data/",
+        "users/<int:pk>/auth/",
+        "users/<int:pk>/consents/",
     ],
 )
 ```
@@ -779,6 +792,24 @@ path_with_old(
 layout: true
 
 ## Here we go again: "path with old"
+
+---
+
+---
+
+```python
+def path_with_old(route, view, kwargs=None, name=None, `*, old=None`):
+    return path(route, view, kwargs, name)
+```
+
+---
+
+```python
+def path_with_old(route, view, kwargs=None, name=None, `*, old=None`):
+    paths = [path(route, view, kwargs, name)]
+
+    return paths[0]
+```
 
 ---
 
@@ -815,12 +846,10 @@ def path_with_old(route, view, kwargs=None, name=None, *, old=None):
     if name and old:
         redirect_view = `get_redirect_view`(name)
 
-        for idx, old_path in enumerate(old):
-            redirect_path = path(
-                old_path, redirect_view,
-                kwargs, f"{name}__{idx}"
+        for old_path in old:
+            paths.append(
+                path(old_path, redirect_view, kwargs)
             )
-            paths.append(redirect_path)
 
     return path("", include(paths)) if len(paths) > 1 else paths[0]
 ```
@@ -853,9 +882,8 @@ def get_redirect_view(name):
 
     def redirect_view_on_the_fly(request, *args, **kwargs):
         resolver_match = request.resolver_match
-        resolved_namespaces = resolver_match.namespaces
 
-        full_name = ":".join([*resolved_namespaces, name])
+        full_name = f"{resolver_match.namespace}:{name}"
         return redirect(full_name, *args, **kwargs, permanent=True)
 
     return redirect_view_on_the_fly
@@ -867,7 +895,22 @@ def get_redirect_view(name):
 
 ---
 
+template: geek
+
+---
+
 layout: false
+class: middle center
+
+#### Design as best as you can <br/> Break as less as you can
+
+---
+
+class: middle center
+
+# The art of (not) redirecting
+
+---
 
 ## Thank you!
 
