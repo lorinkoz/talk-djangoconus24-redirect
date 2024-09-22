@@ -130,7 +130,7 @@ class: middle center
 
 ---
 
-## Redirect codes that will help!
+## Status codes that will help!
 
 --
 
@@ -146,7 +146,7 @@ class: middle center
 
 ---
 
-## Redirect codes that should have existed <br/>.small[(but don't)]
+## Status codes that should have existed <br/>.small[(but don't)]
 
 --
 
@@ -168,33 +168,68 @@ class: middle center
 
 ---
 
-## My story
+class: middle center
 
----
-
-## The plan
-
---
-
-1. Design .blue[new] URL structure
-
---
-
-2. Mount in tandem with .red[old]
-
---
-
-3. Redirect .red[old] to .blue[new]
-
---
-
-4. Retire .red[old] URLs (eventually) 🤔
+#### btw, why am I telling you all this?
 
 ---
 
 class: middle center
 
+![Sketch of me biting my nails](images/storytime.png)
+
+---
+
+class: middle center
+
+![Sketch image of Alasco](images/alasco.png)
+
+---
+
+class: middle center
+
+.large[.huge[💡]]
+
+---
+
+layout: true
+
+## The plan
+
+---
+
+.center[![Plan step 0](images/plan-0.png)]
+
+---
+
+.center[![Plan step 1](images/plan-1.png)]
+
+---
+
+.center[![Plan step 2](images/plan-2.png)]
+
+---
+
+.center[![Plan step 3](images/plan-3.png)]
+
+---
+
+layout: false
+class: middle center
+
 # The art of not redirecting
+
+---
+
+## Basic principles
+
+--
+
+.left-column.center[![The Zen of Python](https://cdn-blog.adafruit.com/uploads/2020/06/20200602zen.jpg)]
+
+--
+
+.right-column.center[![Hansel and Gretel leaving breadcrumbs](images/breadcrumbs.png)]
 
 ---
 
