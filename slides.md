@@ -69,24 +69,15 @@ class: middle
 
 ---
 
-layout: true
-class: middle center
+class: middle
 
-![Cool URIs don't change QR Code](images/qr-uris.png)
+.blue[Tim Berners-Lee &mdash; Cool URIs don't change, 1998]
 
-{{ content }}
+- Yes it's your responsibility as **Webmaster**.
+- This needs thought, and organization, and commitment.
+- Once you put a URL out there you should **never** break it.
 
-.small.blue[Tim Berners-Lee &mdash; Cool URIs don't change, 1998]
-
----
-
-It is the the duty of a **Webmaster** to allocate URIs which you will be able to stand by in 2 years, in 20 years, in 200 years. This needs thought, and organization, and commitment.
-<br/>
-<br/>
-
----
-
-When you change a URI on your server, you can never completely tell who will have links to the old URI [...] They might have bookmarked your page. They might have scrawled the URI in the margin of a letter to a friend.
+.right[![Cool URIs don't change QR Code](images/qr-uris.png)]
 
 ---
 
@@ -135,8 +126,6 @@ class: middle center
 
 ### Avoid 404s at all costs
 
----
-
 ???
 
 Reality: We should avoid not-rightful 404s
@@ -166,7 +155,7 @@ class: middle center
 
 ---
 
-## Status codes that should have existed <br/>.small[(but don't)]
+## Status codes that should exist <br/>.small[(but don't)]
 
 --
 
@@ -188,21 +177,13 @@ class: middle center
 
 ---
 
-class: middle center
-
-#### btw, why am I telling you all this?
-
----
-
-class: middle center
+class: center
 
 ![Sketch of me biting my nails](images/storytime.png)
 
----
+--
 
-class: middle center
-
-![Sketch image of Alasco](images/alasco.png)
+![Sample URL](images/sample-url.png)
 
 ---
 
