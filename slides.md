@@ -10,8 +10,8 @@ class: middle center
 
 #### Lorenzo Peña
 
-- 15 years of Python + Django
 - From Holguín to Munich
+- 15 years of Python + Django
 - Django developer at Alasco
 
 ![Alasco QR Code](images/qr-alasco.png)
@@ -41,9 +41,11 @@ class: middle center
 
 ---
 
-class: middle center
+class: middle
 
 ## Whose responsibility is this?
+
+![Sample URL](images/sample-url.png)
 
 ---
 
@@ -55,7 +57,15 @@ class: middle center
 
 class: middle center
 
-![Empty browser](images/browser.png)
+![Frontend vs Backend memes](images/frontend-vs-backend.png)
+
+---
+
+class: middle
+
+## This is a mirror to the soul of the code
+
+![Sample URL](images/sample-url.png)
 
 ---
 
@@ -94,7 +104,7 @@ class: middle
 ![Meme of person staring at screen](images/staring.png)
 
 Naming things is hard<br/>
-(let alone URLs)
+(URLs included)
 
 ]
 
@@ -115,7 +125,7 @@ class: middle center
 
 # Design as best as you can
 
-### Break as less as you can
+### Break as little as possible
 
 ???
 
@@ -349,7 +359,6 @@ class: middle center
 
 ---
 
-name: geek
 class: middle center
 
 .large[.huge[🤓]]
@@ -895,14 +904,17 @@ def get_redirect_view(name):
 
 ---
 
-template: geek
+layout:false
+class: middle center
+
+.large[.huge[🎩]]
 
 ---
 
 layout: false
 class: middle center
 
-#### Design as best as you can <br/> Break as less as you can
+#### Design as best as you can <br/> Break as little as possible
 
 ---
 
