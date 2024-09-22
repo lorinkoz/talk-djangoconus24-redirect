@@ -70,9 +70,21 @@ hr {
   width: 66%;
   float: left;
 }
+
 .right-column-33 {
   width: 33%;
   float: right;
+}
+
+.codewip {
+  width: 84%;
+  float: left;
+}
+
+.tasklist {
+  width: 15%;
+  float: right;
+  font-size: 0.6em;
 }
 
 .right-column ~ p {

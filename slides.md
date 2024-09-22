@@ -337,48 +337,32 @@ class: middle center
 
 ---
 
-## Django's provided redirects
+## django.contrib.redirects
+
+--
+
+.center.huge[🔋]
+
+> Stores redirects in a **database** and handles the redirecting via middleware. It uses the HTTP response status code 301.
+
+.right[![django.contrib.redirects QR Code](images/qr-django-redirects.png)]
 
 ---
 
-## Prerequisites
+class: middle center
 
---
-
-🤓 Because we wanted to solve by code...
-
---
-
-.left-column[
-
-#### Framework
-
-- ✅ Named URLs
-- ✅ Namespaced URLs
-
-]
-
---
-
-.right-column[
-
-#### Our code
-
-- 😒 Keep names in sync
-- ✅ Move old URLs to specific namespace
-
-]
+.large[.huge[🤓]]
 
 ---
 
-## The two parallel tracks
+## Mixing the old and the new
 
 --
 
 ```python
 urlpatterns = [
     path("", include("path.to.new.urls"),
-    path("", include("path.to.old.urls", namespace="old_namespace")),
+    path("", include("path.to.old.urls", namespace="old_urls")),
 ]
 ```
 
@@ -387,22 +371,35 @@ urlpatterns = [
 |            |                                                              |
 | ---------- | ------------------------------------------------------------ |
 | .red[old]  | `/estimating/cost_element_budgets/project/1/budget_history/` |
-|            | .red[`old_namespace:budget_history`]                         |
+|            | .red[`old_urls:budget_history`]                              |
 | .blue[new] | `/costs/project/1/budget/history/`                           |
 |            | .blue[`budget_history`]                                      |
 
 ---
 
-name: code-warning
-class: middle center
+## A middleware!
 
-![Sign with a warning about code ahead](images/code-ahead.png)
+.tasklist[
+
+#### TODO:
+
+A middleware to redirect from old to new.
+
+]
 
 ---
 
 ## A middleware!
 
---
+.tasklist[
+
+#### TODO:
+
+~~A middleware to redirect from old to new.~~
+
+]
+
+.codewip[
 
 ```python
 def redirect_middleware(get_response):
@@ -410,13 +407,81 @@ def redirect_middleware(get_response):
     def middleware(request):
         response = get_response(request)
 
-        if go_to_new := `should_go_to_new`(request)
-            return redirect(go_to_new, permanent=True)
+        if new := should_go_to_new(request)
+            return redirect(new, permanent=True)
 
         return response
 
     return middleware
 ```
+
+]
+
+---
+
+## A middleware!
+
+.tasklist[
+
+#### TODO:
+
+~~A middleware to redirect from old to new.~~
+
+A "should go to new" function.
+
+]
+
+.codewip[
+
+```python
+def redirect_middleware(get_response):
+
+    def middleware(request):
+        response = get_response(request)
+
+        if new := `should_go_to_new`(request)
+            return redirect(new, permanent=True)
+
+        return response
+
+    return middleware
+```
+
+]
+
+---
+
+## A middleware!
+
+.tasklist[
+
+#### TODO:
+
+~~A middleware to redirect from old to new.~~
+
+A "should go to new" function.
+
+A modified "redirect" shortcut.
+
+]
+
+.codewip[
+
+```python
+def redirect_middleware(get_response):
+
+    def middleware(request):
+        response = get_response(request)
+
+        if new := should_go_to_new(request)
+            return `redirect(new, permanent=True)`
+
+        return response
+
+    return middleware
+```
+
+]
 
 ---
 
@@ -459,7 +524,7 @@ def is_old_url(request):
     resolver_match = request.resolver_match
 
     # Having namespaced the old URLs comes in handy now
-    return "old_namespace" in resolver_match.app_names
+    return "old_urls" in resolver_match.app_names
 ```
 
 ---
