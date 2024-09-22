@@ -43,7 +43,7 @@ class: middle center
 
 class: middle
 
-## Whose responsibility is this?
+## Am I responsible for this?
 
 ![Sample URL](images/sample-url.png)
 
@@ -63,7 +63,7 @@ class: middle center
 
 class: middle
 
-## This is a mirror to the soul of the code
+## This is a mirror to the soul of your code
 
 ![Sample URL](images/sample-url.png)
 
@@ -126,6 +126,16 @@ class: middle center
 # Design as best as you can
 
 ### Break as little as possible
+
+---
+
+class: middle center
+
+# Love your URLs
+
+### Avoid 404s at all costs
+
+---
 
 ???
 
