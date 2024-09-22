@@ -355,7 +355,7 @@ class: middle center
 
 ---
 
-## Mixing the old and the new
+## Redirecting from old to new
 
 --
 
@@ -377,11 +377,13 @@ urlpatterns = [
 
 ---
 
-## A middleware!
+layout: true
+
+## A middleware
+
+---
 
 .tasklist[
-
-#### TODO:
 
 A middleware to redirect from old to new.
 
@@ -389,13 +391,9 @@ A middleware to redirect from old to new.
 
 ---
 
-## A middleware!
-
 .tasklist[
 
-#### TODO:
-
-~~A middleware to redirect from old to new.~~
+.strike[A middleware to redirect from old to new.]
 
 ]
 
@@ -407,7 +405,7 @@ def redirect_middleware(get_response):
     def middleware(request):
         response = get_response(request)
 
-        if new := should_go_to_new(request)
+        if new := should_go_to_new(request, response)
             return redirect(new, permanent=True)
 
         return response
@@ -419,13 +417,9 @@ def redirect_middleware(get_response):
 
 ---
 
-## A middleware!
-
 .tasklist[
 
-#### TODO:
-
-~~A middleware to redirect from old to new.~~
+.strike[A middleware to redirect from old to new.]
 
 A "should go to new" function.
 
@@ -439,7 +433,7 @@ def redirect_middleware(get_response):
     def middleware(request):
         response = get_response(request)
 
-        if new := `should_go_to_new`(request)
+        if new := `should_go_to_new(request, response)`
             return redirect(new, permanent=True)
 
         return response
@@ -451,13 +445,9 @@ def redirect_middleware(get_response):
 
 ---
 
-## A middleware!
-
 .tasklist[
 
-#### TODO:
-
-~~A middleware to redirect from old to new.~~
+.strike[A middleware to redirect from old to new.]
 
 A "should go to new" function.
 
@@ -473,7 +463,7 @@ def redirect_middleware(get_response):
     def middleware(request):
         response = get_response(request)
 
-        if new := should_go_to_new(request)
+        if new := should_go_to_new(request, response)
             return `redirect(new, permanent=True)`
 
         return response
@@ -485,71 +475,274 @@ def redirect_middleware(get_response):
 
 ---
 
-## A "should go to new" function!
+.tasklist[
 
---
+.strike[A middleware to redirect from old to new.]
+
+A "should go to new" function.
+
+.strike[A modified "redirect" shortcut.]
+
+]
+
+.codewip[
 
 ```python
-def should_go_to_new(request):
-    if `we_want_to_handle`(request) and `is_old_url`(request):
-        try:
-            return `find_new_url`(request)
-        except NoReverseMatch:
-            # Because it's humans keeping things in sync
-            logger.warning("🚧")
+def redirect_middleware(get_response):
+
+    def middleware(request):
+        response = get_response(request)
+
+        if new := should_go_to_new(request, response)
+            return redirect(new, permanent=True)
+
+        return response
+
+    return middleware
+```
+
+]
+
+---
+
+layout: true
+
+## A "should go to new" function
+
+---
+
+.tasklist[
+
+A "should go to new" function.
+
+]
+
+---
+
+.tasklist[
+
+.strike[A "should go to new" function.]
+
+]
+
+.codewip[
+
+```python
+def should_go_to_new(request, response):
+    if we_want_to_handle(response) and is_old_url(request):
+        return find_new_url(request)
 
     return None
 
 ```
 
+]
+
 ---
+
+.tasklist[
+
+.strike[A "should go to new" function.]
+
+Do we want to handle?
+
+]
+
+.codewip[
+
+```python
+def should_go_to_new(request, response):
+    if `we_want_to_handle(response)` and is_old_url(request):
+        return find_new_url(request)
+
+    return None
+
+```
+
+]
+
+---
+
+.tasklist[
+
+.strike[A "should go to new" function.]
+
+Do we want to handle?
+
+Is old URL?
+
+]
+
+.codewip[
+
+```python
+def should_go_to_new(request, response):
+    if we_want_to_handle(response) and `is_old_url(request)`:
+        return find_new_url(request)
+
+    return None
+
+```
+
+]
+
+---
+
+.tasklist[
+
+.strike[A "should go to new" function.]
+
+Do we want to handle?
+
+Is old URL?
+
+A "find new url" function.
+
+]
+
+.codewip[
+
+```python
+def should_go_to_new(request, response):
+    if we_want_to_handle(response) and is_old_url(request):
+        return `find_new_url(request)`
+
+    return None
+
+```
+
+]
+
+---
+
+layout: true
 
 ## Do we want to handle?
 
---
+---
+
+.tasklist[
+
+Do we want to handle?
+
+Is old URL?
+
+A "find new url" function.
+
+]
+
+.codewip[
 
 ```python
-def we_want_to_handle(request):
-    return response.status_code not in [301, 302]
+def we_want_to_handle(response):
+    return response.status_code not in [
+        301,
+        302,
+        307,
+        308,
+    ]
 ```
+
+]
 
 ---
 
+layout: true
+
 ## Is old URL?
 
---
+---
+
+.tasklist[
+
+.strike[Do we want to handle?]
+
+Id old URL?
+
+A "find new url" function.
+
+]
+
+.codewip[
 
 ```python
 def is_old_url(request):
     resolver_match = request.resolver_match
 
-    # Having namespaced the old URLs comes in handy now
-    return "old_urls" in resolver_match.app_names
+    return "old_urls" in resolver_match.namespaces
 ```
+
+]
 
 ---
 
+layout: true
+
 ## Find new URL!
 
---
+---
+
+.tasklist[
+
+.strike[Do we want to handle?]
+
+.strike[Id old URL?]
+
+A "find new url" function.
+
+]
+
+.codewip[
 
 ```python
 def find_new_url(request):
     resolver_match = request.resolver_match
 
-    # Ah yes, view comes with all namespaces prefixed
-    view_name = resolver_match.view_name.split(":")[-1]
-
-    return reverse(
-        view_name,
-        args=resolver_match.args,
-        kwargs=resolver_match.kwargs
-    )
+    try:
+        return reverse(
+            resolver_match.url_name,
+            args=resolver_match.args,
+            kwargs=resolver_match.kwargs
+        )
+    except NoReverseMatch:
+        logger.warning("🚧")
 ```
 
---
+]
 
-.box[🤔 What about query parameters?]
+---
+
+.tasklist[
+
+.strike[Do we want to handle?]
+
+.strike[Id old URL?]
+
+.strike[A "find new url" function.]
+
+]
+
+.codewip[
+
+```python
+def find_new_url(request):
+    resolver_match = request.resolver_match
+
+    try:
+        return reverse(
+            resolver_match.url_name,
+            args=resolver_match.args,
+            kwargs=resolver_match.kwargs
+        ) `+ "?..."`
+    `except NoReverseMatch:`
+        logger.warning("🚧")
+```
+
+]
+
+---
+
+layout: false
 
 ---
 

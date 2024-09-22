@@ -87,6 +87,11 @@ hr {
   font-size: 0.6em;
 }
 
+.tasklist:before {
+  content: "TODO:";
+  font-weight: bold;
+}
+
 .right-column ~ p {
   clear: both;
 }
@@ -193,6 +198,7 @@ hr {
 
 .strike {
   text-decoration: line-through;
+  color: gray;
 }
 
 .bold {
