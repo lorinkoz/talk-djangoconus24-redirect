@@ -81,10 +81,13 @@ When you change a URI on your server, you can never completely tell who will hav
 ---
 
 layout: false
+class: middle center
 
-## The problem
+.large[.huge[🫠]]
 
---
+---
+
+class: middle
 
 .center.left-column[
 
@@ -121,11 +124,13 @@ Joke: Let's return 400 instead and make everyone crazy
 
 ---
 
-## Redirects
+class: middle center
+
+![Meme of redirects everywhere](images/redirects-everywhere.png)
 
 ---
 
-## Redirect codes!
+## Redirect codes that will help!
 
 --
 
@@ -139,15 +144,31 @@ Joke: Let's return 400 instead and make everyone crazy
 
 > > .code.green.big[308_PERMANENT_REDIRECT]
 
+---
+
+## Redirect codes that should have existed <br/>.small[(but don't)]
+
 --
 
-> > .code.green.big[309_REPLACE_USER_BOOKMARKS]
+> > .code.green.big[309_REDIRECT_AND_REPLACE_USER_BOOKMARKS]
+
+--
+
+> > .code.green.big[310_RECURSION_BASE_CASE]
+
+--
+
+> > .code.green.big[311_NEVER_GONNA_GIVE_YOU_UP]
+
+.right-column.right[
+
+    ![Surprise link](images/qr-rick.png)
+
+]
 
 ---
 
 ## My story
-
-.left-column-33[![Post with directions](images/directions.jpeg)]
 
 ---
 
@@ -448,10 +469,6 @@ path_with_old(
 
 ---
 
-template: code-warning
-
----
-
 layout: true
 
 ## Here we go again: "path with old"
@@ -566,3 +583,9 @@ layout: false
 ![Slides QR Code](images/qr-slides.png)
 
 ]
+
+---
+
+class: middle center
+
+![DjangoCon US](images/djc.png)
