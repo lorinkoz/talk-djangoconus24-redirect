@@ -237,7 +237,7 @@ class: middle center
 
 --
 
-People will read them, some will even search them
+People will read them, some will even type them by memory.
 
 <br/>
 
@@ -254,7 +254,7 @@ People will read them, some will even search them
 
 --
 
-People should be able to guess-navigate your site by rewriting URLs
+People should be able to guess-navigate your site by rewriting URLs.
 
 <br/>
 
@@ -268,7 +268,7 @@ People should be able to guess-navigate your site by rewriting URLs
 
 --
 
-Straight to the point, no redundancy
+Straight to the point, no redundancy.
 
 <br/>
 
@@ -281,7 +281,7 @@ Straight to the point, no redundancy
 
 --
 
-Every part must lead to somewhere, or at least redirect
+Every part must lead to somewhere, or at least redirect to somewhere else.
 
 <br/>
 
@@ -295,25 +295,39 @@ Every part must lead to somewhere, or at least redirect
 
 --
 
-Single language, single style
+Single language, single style.
 
 <br/>
 
-.box.what[/current_user/Sicherheit/multi-factorAuth]
+.box.what[/current_user/Seguridad/multi-factorAuth]
 .box.nice[/current-user/security/multi-factor-auth]
 
 ---
 
+layout: true
+
 ## Beautiful
 
---
+---
 
-If it's well designed, it will be beautiful
+---
+
+What is beautiful?
 
 .box.nice[/this_style/is_beautiful/]
 .box.nice[/this-one/as-well]
 .box.nice[/style/isReallyNotThatImportant.html]
 .box.nice[\#/or-is-it?]
+
+---
+
+Thought, and organization and commitment will make them .bold[beautiful].
+
+---
+
+layout: false
+
+.center[![Plan step 1](images/plan-1.png)]
 
 ---
 
