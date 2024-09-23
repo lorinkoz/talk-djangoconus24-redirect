@@ -242,7 +242,7 @@ People will read them, some will even type them by memory.
 
 <br/>
 
-.box.what[/u/d/c/~q/page.html]
+.box.what[/u/d/1/c/~q/page]
 .box.nice[/user/profile]
 
 ???
@@ -317,12 +317,7 @@ What is beautiful?
 
 .box.nice[/this_style/is_beautiful/]
 .box.nice[/this-one/as-well]
-.box.nice[/style/isReallyNotThatImportant.html]
-.box.nice[\#/or-is-it?]
-
----
-
-Thought, organization and commitment will make them .bold[beautiful].
+.box.nice[/beauty/isInTheEye/ofTheBeholder]
 
 ---
 
