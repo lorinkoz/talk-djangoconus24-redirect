@@ -839,7 +839,7 @@ def path_with_old(route, view, kwargs=None, name=None, *, old=None):
     paths = [path(route, view, kwargs, name)]
 
     if name and old:
-        redirect_view = `get_redirect_view`(name)
+        redirect_view = `get_redirect_view(name)`
 
         for old_path in old:
             paths.append(
