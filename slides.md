@@ -124,6 +124,11 @@ class: middle center
 
 ### Avoid 404s at all costs
 
+???
+
+410 gone
+422 unprocessable content
+
 ---
 
 class: middle center
@@ -182,6 +187,10 @@ class: center
 
 ![Sketch of me biting my nails](images/storytime.png)
 
+???
+
+emoji based identity protection
+
 --
 
 ![Sample URL](images/sample-url.png)
@@ -219,7 +228,34 @@ layout: true
 layout: false
 class: middle center
 
-# Designing URLs
+# Did it work?
+
+---
+
+class: middle center
+
+# Did it work? .dark[YES!]
+
+---
+
+class: middle center
+
+# Was it worth it?
+
+---
+
+class: middle center
+
+# Was it worth it? .dark[ABSOLUTELY! 😎]
+
+---
+
+layout: false
+class: middle center
+
+## The art of .emph[not redirecting]
+
+.big.orange.bold[or how to design URLs]
 
 ---
 
@@ -328,9 +364,19 @@ What is beautiful?
 
 ---
 
+layout: false
 class: middle center
 
-# Redirecting
+# Love your URLs
+
+---
+
+layout: false
+class: middle center
+
+## The art of .emph[redirecting]
+
+.big.orange.bold[or how avoid 404s at all costs]
 
 ---
 
@@ -358,8 +404,19 @@ class: middle center
 
 ```python
 urlpatterns = [
-    path("", include("path.to.new.urls"),
+    path("", include("path.to.old.urls")),
+    path("", include("path.to.new.urls")),
+]
+```
+
+---
+
+## Redirecting from old to new
+
+```python
+urlpatterns = [
     path("", include("path.to.old.urls", namespace="old_urls")),
+    path("", include("path.to.new.urls")),
 ]
 ```
 
@@ -631,13 +688,14 @@ A "find new url" function.
 .codewip[
 
 ```python
+REDIRECT_CODES = [301, 302, 307, 308]
+
+
 def we_want_to_handle(response):
-    return response.status_code not in [
-        301,
-        302,
-        307,
-        308,
-    ]
+    return (
+        not expensive_to_compute(response)
+        and response.status_code not in REDIRECT_CODES
+    )
 ```
 
 ]
@@ -913,7 +971,7 @@ class: middle center
 
 ## Thank you!
 
-<br/>
+You can find me here:
 
 .left-column-66[
 

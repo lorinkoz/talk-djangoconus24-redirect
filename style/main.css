@@ -188,8 +188,12 @@ hr {
   color: #3d9cfb;
 }
 
-.yellow {
-  color: #e7bb43;
+.orange {
+  color: #f39745;
+}
+
+.dark {
+  color: #7d241f;
 }
 
 .emph {
