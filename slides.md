@@ -14,8 +14,6 @@ class: middle center
 - 15 years of Python + Django
 - Django developer at Alasco
 
-![Alasco QR Code](images/qr-alasco.png)
-
 ]
 
 .right-column-33[![Myself](images/lorinkoz.png)]
@@ -126,16 +124,19 @@ class: middle center
 
 ### Avoid 404s at all costs
 
-???
-
-Reality: We should avoid not-rightful 404s
-Joke: Let's return 400 instead and make everyone crazy
-
 ---
 
 class: middle center
 
 ![Meme of redirects everywhere](images/redirects-everywhere.png)
+
+???
+
+- http to https
+- auth and back
+- post to get
+- short urls
+- analytics
 
 ---
 
@@ -218,7 +219,7 @@ layout: true
 layout: false
 class: middle center
 
-# The art of not redirecting
+# Designing URLs
 
 ---
 
@@ -245,10 +246,6 @@ People will read them, some will even type them by memory.
 .box.what[/u/d/1/c/~q/page]
 .box.nice[/user/profile]
 
-???
-
-- Obfuscation by design: some valid use cases
-
 ---
 
 ## Predictable
@@ -259,9 +256,9 @@ People should be able to guess-navigate your site by rewriting URLs.
 
 <br/>
 
-.box.nice[/user/profile]
-.box.nice[/user/settings]
-.box.nice[/user/security]
+.box.nice[/user/profile/]
+.box.nice[/user/settings/]
+.box.nice[/user/security/]
 
 ---
 
@@ -305,15 +302,13 @@ Single language, single style.
 
 ---
 
-layout: true
-
 ## Beautiful
 
----
-
----
+--
 
 What is beautiful?
+
+<br/>
 
 .box.nice[/this_style/is_beautiful/]
 .box.nice[/this-one/as-well]
@@ -321,15 +316,21 @@ What is beautiful?
 
 ---
 
-layout: false
+## At least not ugly
 
-.center[![Plan step 1](images/plan-1.png)]
+--
+
+<br/>
+
+.box.look[/avoid/file_extensions.aspxyz]
+.box.look[/if-possible?queryParamBasedNavigation=too]
+.box.what[/django-docs/have/strong,words,for,you]
 
 ---
 
 class: middle center
 
-# The art of redirecting
+# Redirecting
 
 ---
 
@@ -339,7 +340,7 @@ class: middle center
 
 .center.huge[🔋]
 
-> Stores redirects in a **database** and handles the redirecting via middleware. It uses the HTTP response status code 301.
+> Stores redirects in a **database** and handles the redirecting via middleware. Uses the HTTP response status code 301.
 
 .right[![django.contrib.redirects QR Code](images/qr-django-redirects.png)]
 
