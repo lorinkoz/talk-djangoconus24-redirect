@@ -937,7 +937,7 @@ def get_redirect_view(name):
     def redirect_view_on_the_fly(request, *args, **kwargs):
         resolver_match = request.resolver_match
 
-        full_name = f"{resolver_match.namespace}:{name}"
+        full_name = ":".join([*resolver_match.namespaces, name])
         return redirect(full_name, *args, **kwargs, permanent=True)
 
     return redirect_view_on_the_fly
